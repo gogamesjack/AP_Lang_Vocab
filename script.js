@@ -31,6 +31,10 @@
     document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; max-age=31536000; path=/; samesite=lax`;
   }
 
+  function clearCookie(name) {
+    document.cookie = `${encodeURIComponent(name)}=; max-age=0; path=/; samesite=lax`;
+  }
+
   function readTimes() {
     try {
       const value = JSON.parse(readCookie(TIMES_COOKIE) || '[]');
@@ -72,14 +76,68 @@
     } catch (_) { }
   }
 
+  function readWeekTimes(week) {
+    try {
+      const value = JSON.parse(readCookie(`spellwell.times.week-${week}`) || '[]');
+      return Array.isArray(value) ? value.filter(time => Number.isFinite(Number(time))).map(Number) : [];
+    } catch (_) {
+      return [];
+    }
+  }
+
+  function scoreGraph(times) {
+    if (!times.length) return '<p class="no-history">No scores yet</p>';
+
+    const width = 320;
+    const height = 92;
+    const padding = 10;
+    const max = Math.max(...times);
+    const min = Math.min(...times);
+    const range = max - min || 1;
+    const points = times.map((time, i) => {
+      const x = times.length === 1 ? width / 2 : padding + i * (width - padding * 2) / (times.length - 1);
+      const y = padding + (time - min) * (height - padding * 2) / range;
+      return [x, y];
+    });
+    const polyline = points.map(point => point.join(',')).join(' ');
+    const circles = points.map((point, i) =>
+      `<circle cx="${point[0]}" cy="${point[1]}" r="4" fill="#287956"><title>Run ${i + 1}: ${fmt(times[i])}</title></circle>`
+    ).join('');
+
+    return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Score progression for ${times.length} runs">
+      <polyline points="${polyline}" fill="none" stroke="#287956" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      ${circles}
+    </svg>
+    <div class="history-labels"><span>Run 1</span><span>${times.map(fmt).join(' · ')}</span></div>`;
+  }
+
+  function clearWeekScores(week) {
+    clearCookie(`spellwell.best.week-${week}`);
+    clearCookie(`spellwell.times.week-${week}`);
+    try {
+      localStorage.removeItem(`spellwell.best.ap-lang-vocab-${week}`);
+    } catch (_) { }
+  }
+
   function loadIndexTimes() {
-    document.querySelectorAll('[data-week]').forEach(link => {
-      const week = link.dataset.week;
-      const bestValue = Number(readCookie(`spellwell.best.week-${week}`));
-      if (bestValue > 0) {
-        const label = link.querySelector('small');
-        if (label) label.textContent = `Best ${fmt(bestValue)} · ${link.querySelector('span') ? 'Practice →' : ''}`;
-      }
+    document.querySelectorAll('[data-week]').forEach(row => {
+      const week = row.dataset.week;
+      const times = readWeekTimes(week);
+      const bestValue = times.length ? Math.min(...times) : Number(readCookie(`spellwell.best.week-${week}`));
+      const label = row.querySelector('.week-link small');
+      if (label) label.textContent = bestValue > 0 ? `Best ${fmt(bestValue)} · Practice →` : '10 words →';
+
+      const history = row.querySelector('.score-history');
+      if (history) history.innerHTML = scoreGraph(times);
+    });
+
+    document.querySelectorAll('[data-clear-week]').forEach(button => {
+      button.addEventListener('click', () => {
+        const week = button.dataset.clearWeek;
+        if (!window.confirm(`Clear all saved scores for Week ${week}?`)) return;
+        clearWeekScores(week);
+        location.reload();
+      });
     });
   }
 

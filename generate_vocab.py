@@ -156,7 +156,7 @@ def week_page(week: str, words: list[dict[str, str]]) -> str:
 <body>
   <div class="shell">
     <header class="top">
-      <div class="brand"><span class="mark">✳</span><span>spellwell</span></div>
+      <a class="brand" href="index.html" aria-label="Go to vocabulary home"><span class="mark">✳</span><span>spellwell</span></a>
       <div class="course">AP Lang Vocab {html.escape(week)}</div>
     </header>
     <main id="app" class="panel" aria-live="polite"></main>
@@ -175,8 +175,13 @@ def week_page(week: str, words: list[dict[str, str]]) -> str:
 
 def index_page(weeks: dict[str, list[dict[str, str]]]) -> str:
     links = "\n".join(
-        f'        <a class="week-link" data-week="{html.escape(week)}" href="week-{week}.html">'
+        f'        <div class="week-row" data-week="{html.escape(week)}">'
+        f'<a class="week-link" href="week-{week}.html">'
         f'<span>Week {html.escape(week)}</span><small>{len(words)} words →</small></a>'
+        f'<button class="clear-scores btn secondary" type="button" data-clear-week="{html.escape(week)}" '
+        f'aria-label="Clear scores for week {html.escape(week)}">Clear scores</button>'
+        f'<div class="score-history" aria-label="Week {html.escape(week)} score history"></div>'
+        f'</div>'
         for week, words in weeks.items()
     )
     if not links:
@@ -196,7 +201,7 @@ def index_page(weeks: dict[str, list[dict[str, str]]]) -> str:
 <body>
   <div class="shell">
     <header class="top">
-      <div class="brand"><span class="mark">✳</span><span>spellwell</span></div>
+      <a class="brand" href="index.html" aria-label="Go to vocabulary home"><span class="mark">✳</span><span>spellwell</span></a>
       <div class="course">AP Lang Vocabulary</div>
     </header>
     <main class="panel">

@@ -53,7 +53,9 @@ button {
   gap: 10px;
   font-size: 20px;
   font-weight: 800;
-  letter-spacing: -.04em
+  letter-spacing: -.04em;
+  color: var(--ink);
+  text-decoration: none
 }
 
 .mark {
@@ -388,8 +390,15 @@ h1 {
 .week-list {
   display: grid;
   gap: 10px;
-  width: min(380px, 100%);
+  width: min(520px, 100%);
   margin: 0 auto
+}
+
+.week-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 10px;
+  align-items: center
 }
 
 .week-link {
@@ -413,6 +422,44 @@ h1 {
 .week-link small {
   color: var(--muted);
   font-size: 12px
+}
+
+.clear-scores {
+  padding: 10px 12px;
+  color: var(--red);
+  white-space: nowrap
+}
+
+.score-history {
+  grid-column: 1 / -1;
+  min-height: 116px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fafbf9;
+  padding: 8px 12px 6px
+}
+
+.score-history svg {
+  display: block;
+  width: 100%;
+  height: 92px
+}
+
+.no-history {
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px
+}
+
+.history-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 9px
 }
 
 .home-link {
