@@ -175,7 +175,7 @@ def week_page(week: str, words: list[dict[str, str]]) -> str:
 
 def index_page(weeks: dict[str, list[dict[str, str]]]) -> str:
     links = "\n".join(
-        f'        <a class="week-link" href="week-{week}.html">'
+        f'        <a class="week-link" data-week="{html.escape(week)}" href="week-{week}.html">'
         f'<span>Week {html.escape(week)}</span><small>{len(words)} words →</small></a>'
         for week, words in weeks.items()
     )
@@ -212,6 +212,7 @@ def index_page(weeks: dict[str, list[dict[str, str]]]) -> str:
       </section>
     </main>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -415,6 +415,35 @@ h1 {
   font-size: 12px
 }
 
+.home-link {
+  color: var(--green);
+  font-weight: 780;
+  text-decoration: none
+}
+
+.home-link:hover {
+  text-decoration: underline
+}
+
+.saved-times {
+  max-width: 380px;
+  margin: 12px auto 0;
+  color: var(--muted)
+}
+
+.saved-times small {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em
+}
+
+.saved-times p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere
+}
+
 @media(max-width:540px) {
   body {
     padding: 17px 12px 28px

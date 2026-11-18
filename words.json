@@ -1,54 +1,262 @@
 {
-	"5": [
-		{
-			"word": "Intransigence",
-			"hint": "In-tran-si-gence",
-			"definition": "Stubborn refusal to change your mind or compromise"
-		},
-		{
-			"word": "Chagrin",
-			"hint": "Cha-grin",
-			"definition": "A feeling of embarrassment or disappointment"
-		},
-		{
-			"word": "Predilection",
-			"hint": "Pre-di-lec-tion",
-			"definition": "A strong liking or preference for something"
-		},
-		{
-			"word": "Incontrovertible",
-			"hint": "In-con-tro-ver-ti-ble",
-			"definition": "So clearly true that it cannot reasonably be disputed"
-		},
-		{
-			"word": "Equivocate",
-			"hint": "E-qui-vo-cate",
-			"definition": "To avoid giving a clear or direct answer"
-		},
-		{
-			"word": "Incongruous",
-			"hint": "In-con-gru-ous",
-			"definition": "Strange or out of place because something does not fit"
-		},
-		{
-			"word": "Acquiesce",
-			"hint": "Ac-qui-esce",
-			"definition": "To accept or agree to something without resisting"
-		},
-		{
-			"word": "Paradox",
-			"hint": "Para-dox",
-			"definition": "A seeming contradiction that may reveal a truth"
-		},
-		{
-			"word": "Asyndeton",
-			"hint": "A-syn-de-ton",
-			"definition": "The omission of conjunctions between words or phrases"
-		},
-		{
-			"word": "Polysyndeton",
-			"hint": "Poly-syn-de-ton",
-			"definition": "The use of multiple conjunctions in close succession"
-		}
-	]
+  "1": [
+    {
+      "word": "Proprietary",
+      "hint": "Pro-pri-e-tary",
+      "definition": "Owned by a particular person or company"
+    },
+    {
+      "word": "Niche",
+      "hint": "Niche",
+      "definition": "A specialized role, position, or area"
+    },
+    {
+      "word": "Sporadic",
+      "hint": "Spo-rad-ic",
+      "definition": "Happening occasionally or irregularly"
+    },
+    {
+      "word": "Disparage",
+      "hint": "Dis-par-age",
+      "definition": "To speak about someone or something negatively"
+    },
+    {
+      "word": "Intrinsic",
+      "hint": "In-trin-sic",
+      "definition": "Naturally belonging to something; essential"
+    },
+    {
+      "word": "Contingency",
+      "hint": "Con-tin-gen-cy",
+      "definition": "A possible future event that may require preparation"
+    },
+    {
+      "word": "Sinecure",
+      "hint": "Si-ne-cure",
+      "definition": "A paid position requiring little or no work"
+    },
+    {
+      "word": "Context",
+      "hint": "Con-text",
+      "definition": "The circumstances surrounding a speech or piece of writing"
+    },
+    {
+      "word": "Exigence",
+      "hint": "Ex-i-gence",
+      "definition": "The situation or problem that prompts someone to write or speak"
+    },
+    {
+      "word": "Purpose",
+      "hint": "Pur-pose",
+      "definition": "What an author wants to accomplish through writing"
+    }
+  ],
+  "2": [
+    {
+      "word": "Abstemious",
+      "hint": "Ab-ste-mi-ous",
+      "definition": "Showing restraint, especially in eating or drinking"
+    },
+    {
+      "word": "Belie",
+      "hint": "Be-lie",
+      "definition": "To give a false impression of something"
+    },
+    {
+      "word": "Reticent",
+      "hint": "Ret-i-cent",
+      "definition": "Unwilling to speak or share thoughts"
+    },
+    {
+      "word": "Ineffable",
+      "hint": "In-ef-fa-ble",
+      "definition": "Too great or extreme to describe in words"
+    },
+    {
+      "word": "Fastidious",
+      "hint": "Fas-tid-i-ous",
+      "definition": "Very attentive to details and difficult to please"
+    },
+    {
+      "word": "Quandary",
+      "hint": "Quan-da-ry",
+      "definition": "A state of confusion about what to do"
+    },
+    {
+      "word": "Raucous",
+      "hint": "Rau-cous",
+      "definition": "Loud, harsh, and disorderly"
+    },
+    {
+      "word": "Anaphora",
+      "hint": "A-na-pho-ra",
+      "definition": "Repetition of words at the beginnings of successive clauses"
+    },
+    {
+      "word": "Parallelism",
+      "hint": "Par-al-lel-ism",
+      "definition": "Using similar grammatical structures in related phrases"
+    },
+    {
+      "word": "Hyperbole",
+      "hint": "Hy-per-bo-le",
+      "definition": "Extreme exaggeration used for emphasis"
+    }
+  ],
+  "3": [
+    {
+      "word": "Spurious",
+      "hint": "Spu-ri-ous",
+      "definition": "False or not genuine"
+    },
+    {
+      "word": "Ostensibly",
+      "hint": "Os-ten-si-bly",
+      "definition": "Apparently true, though possibly not actually true"
+    },
+    {
+      "word": "Querulous",
+      "hint": "Quer-u-lous",
+      "definition": "Frequently complaining in an irritated way"
+    },
+    {
+      "word": "Somnolent",
+      "hint": "Som-no-lent",
+      "definition": "Sleepy or drowsy"
+    },
+    {
+      "word": "Mélange",
+      "hint": "Mé-lange",
+      "definition": "A mixture of different things"
+    },
+    {
+      "word": "Pugnacious",
+      "hint": "Pug-na-cious",
+      "definition": "Eager to argue or fight"
+    },
+    {
+      "word": "Languid",
+      "hint": "Lan-guid",
+      "definition": "Lacking energy; slow and relaxed"
+    },
+    {
+      "word": "Chiasmus",
+      "hint": "Chi-as-mus",
+      "definition": "Reversing the order of words or ideas in parallel clauses"
+    },
+    {
+      "word": "Zeugma",
+      "hint": "Zeug-ma",
+      "definition": "One word applies to two others in different ways"
+    },
+    {
+      "word": "Litotes",
+      "hint": "Li-to-tes",
+      "definition": "Understatement for effect, often using a negative"
+    }
+  ],
+  "4": [
+    {
+      "word": "Perfunctory",
+      "hint": "Per-func-tory",
+      "definition": "Done as a routine duty with little interest"
+    },
+    {
+      "word": "Benign",
+      "hint": "Ben-ign",
+      "definition": "Having no significant or harmful effect"
+    },
+    {
+      "word": "Rancor",
+      "hint": "Ran-cor",
+      "definition": "Resentment or bitterness over a past wrong"
+    },
+    {
+      "word": "Inveterate",
+      "hint": "In-vet-er-ate",
+      "definition": "Having a habit that is deeply ingrained"
+    },
+    {
+      "word": "Tacit",
+      "hint": "Tac-it",
+      "definition": "Understood without being directly expressed in words"
+    },
+    {
+      "word": "Vociferous",
+      "hint": "Vo-cif-er-ous",
+      "definition": "Expressing opinions loudly and forcefully"
+    },
+    {
+      "word": "Furtive",
+      "hint": "Fur-tive",
+      "definition": "Done secretly to avoid being noticed"
+    },
+    {
+      "word": "Antithesis",
+      "hint": "An-ti-the-sis",
+      "definition": "The juxtaposition of contrasting ideas"
+    },
+    {
+      "word": "Climax",
+      "hint": "Cli-max",
+      "definition": "Arranging ideas in order of increasing importance"
+    },
+    {
+      "word": "Epistrophe",
+      "hint": "E-pis-tro-phe",
+      "definition": "Repetition of words at the ends of successive clauses"
+    }
+  ],
+  "5": [
+    {
+      "word": "Intransigence",
+      "hint": "In-tran-si-gence",
+      "definition": "Stubborn refusal to change your mind or compromise"
+    },
+    {
+      "word": "Chagrin",
+      "hint": "Cha-grin",
+      "definition": "A feeling of embarrassment or disappointment"
+    },
+    {
+      "word": "Predilection",
+      "hint": "Pre-di-lec-tion",
+      "definition": "A strong liking or preference for something"
+    },
+    {
+      "word": "Incontrovertible",
+      "hint": "In-con-tro-ver-ti-ble",
+      "definition": "So clearly true that it cannot reasonably be disputed"
+    },
+    {
+      "word": "Equivocate",
+      "hint": "E-qui-vo-cate",
+      "definition": "To avoid giving a clear or direct answer"
+    },
+    {
+      "word": "Incongruous",
+      "hint": "In-con-gru-ous",
+      "definition": "Strange or out of place because something does not fit"
+    },
+    {
+      "word": "Acquiesce",
+      "hint": "Ac-qui-esce",
+      "definition": "To accept or agree to something without resisting"
+    },
+    {
+      "word": "Paradox",
+      "hint": "Para-dox",
+      "definition": "A seeming contradiction that may reveal a truth"
+    },
+    {
+      "word": "Asyndeton",
+      "hint": "A-syn-de-ton",
+      "definition": "The omission of conjunctions between words or phrases"
+    },
+    {
+      "word": "Polysyndeton",
+      "hint": "Poly-syn-de-ton",
+      "definition": "The use of multiple conjunctions in close succession"
+    }
+  ]
 }
